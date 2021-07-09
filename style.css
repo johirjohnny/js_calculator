@@ -44,7 +44,7 @@ body::after{
 }
 .container .calculator{
     position: relative;
-    display : flex ;
+    display : grid ;
 }
 .container .calculator .value {
     grid-column: span 4;
@@ -62,14 +62,19 @@ body::after{
 }
 
   
-  .calculator span {
+.container .calculator span {
     display: grid;
-    width: 60px;
-    height: 60px;
-    color: #fff;
-    background: #0c2835;
     place-items: center;
-    border: 1px solid rgba(0, 0, 0, .1)
+    width: 75px;
+    height: 75px;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    place-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
   }
   
   .calculator span:active {
@@ -79,7 +84,7 @@ body::after{
   
   .calculator span.clear {
     grid-column: span 2;
-    width: 120px;
+    width: 150px;
     background: #ff3077;
   }
   
